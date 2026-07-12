@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kindly — secure intelligence, kindly delivered</title>
+<meta name="description" content="Operational consultancy, self-hosted AI, and adoption training for companies that can't use cloud AI. Kindly do the needful — we actually will.">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--coral:#FF6F61;--amber:#FFB25E;--ink:#23253A;--cream:#FFF6EE;--clay:#8A6F66;--green:#2F6D5F;--blush:#FFD9CF;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;}
+  h1,h2,h3{font-family:'Nunito',sans-serif;font-weight:800;letter-spacing:-0.02em;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+  /* nav */
+  nav{position:sticky;top:0;background:rgba(255,246,238,.92);backdrop-filter:blur(8px);z-index:10;border-bottom:1px solid #EDDCCF;}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Nunito';font-weight:800;font-size:24px;}
+  .nav-links a{color:var(--ink);text-decoration:none;font-size:14px;font-weight:500;margin-left:26px;}
+  .nav-links a.cta{background:var(--ink);color:var(--cream);padding:9px 20px;border-radius:99px;font-weight:600;}
+  /* hero */
+  .hero{padding:96px 0 72px;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;}
+  .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--clay);font-weight:600;margin-bottom:18px;}
+  .hero h1{font-size:60px;line-height:1.05;}
+  .hero h1 em{font-style:normal;color:var(--coral);}
+  .hero p.lead{font-size:19px;color:#4A4C60;margin:24px 0 34px;max-width:32em;}
+  .btn{display:inline-block;font-family:'Nunito';font-weight:800;font-size:17px;padding:15px 34px;border-radius:99px;text-decoration:none;transition:transform .15s;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn-coral{background:linear-gradient(135deg,var(--coral),var(--amber));color:#fff;box-shadow:0 8px 24px rgba(255,111,97,.35);}
+  .btn-ghost{color:var(--ink);border:2px solid var(--ink);margin-left:14px;}
+  .hero-art{text-align:center;}
+  /* strip */
+  .strip{background:var(--ink);color:#B9BBD2;padding:16px 0;font-size:14px;text-align:center;}
+  .strip b{color:var(--amber);}
+  /* sections */
+  section{padding:88px 0;}
+  .sec-head{max-width:640px;margin-bottom:48px;}
+  .sec-head h2{font-size:38px;line-height:1.15;}
+  .sec-head p{color:#4A4C60;margin-top:12px;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .card{border-radius:20px;padding:32px 28px;color:#fff;min-height:280px;display:flex;flex-direction:column;}
+  .card h3{font-size:24px;margin-bottom:4px;}
+  .card .tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.85;margin-bottom:16px;font-weight:600;}
+  .card p{font-size:14.5px;opacity:.94;}
+  .c1{background:var(--coral);} .c2{background:var(--ink);} .c2 .tag{color:var(--amber);} .c3{background:var(--green);}
+  /* core */
+  .core{background:var(--ink);color:var(--cream);border-radius:28px;padding:64px 56px;display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:center;}
+  .core h2{font-size:36px;color:var(--cream);}
+  .core p{color:#B9BBD2;margin:16px 0 24px;}
+  .chips span{display:inline-block;border:1px solid #4A4C68;border-radius:99px;padding:7px 16px;font-size:13px;color:var(--cream);margin:0 8px 10px 0;}
+  .chips span b{color:var(--amber);font-weight:600;}
+  /* audit offer */
+  .offer{background:#fff;border:1px solid #EDDCCF;border-radius:28px;padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:48px;}
+  .offer ol{margin:20px 0 0 0;list-style:none;counter-reset:n;}
+  .offer ol li{counter-increment:n;display:flex;gap:16px;margin-bottom:18px;font-size:15px;color:#4A4C60;}
+  .offer ol li::before{content:counter(n);flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--coral);color:#fff;font-family:'Nunito';font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px;}
+  form{display:flex;flex-direction:column;gap:12px;}
+  input,select{padding:14px 16px;border:1.5px solid #E5D5C8;border-radius:12px;font-family:'Inter';font-size:15px;background:var(--cream);color:var(--ink);}
+  input:focus,select:focus{outline:2px solid var(--coral);border-color:transparent;}
+  form button{border:none;cursor:pointer;}
+  .fine{font-size:12px;color:var(--clay);}
+  /* footer */
+  footer{background:var(--ink);color:#7A7C95;padding:48px 0;font-size:13px;}
+  .foot-in{display:flex;justify-content:space-between;align-items:center;}
+  @media(max-width:860px){
+    .hero{grid-template-columns:1fr;padding-top:56px;}
+    .hero h1{font-size:42px;}
+    .cards{grid-template-columns:1fr;}
+    .core,.offer{grid-template-columns:1fr;padding:36px 28px;}
+    .nav-links a:not(.cta){display:none;}
+  }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap nav-in">
+  <div class="brand">
+    <svg viewBox="0 0 100 100" width="34" height="34"><defs><linearGradient id="w1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF6F61"/><stop offset="1" stop-color="#FFB25E"/></linearGradient></defs><line x1="50" y1="22" x2="50" y2="11" stroke="#23253A" stroke-width="4" stroke-linecap="round"/><circle cx="50" cy="8" r="4.5" fill="#FFB25E"/><path d="M50 90 C 27 71 11 55 11 36.5 C11 22.5 21.5 12.5 34.5 12.5 C42.8 12.5 50 17.8 50 26 C50 17.8 57.2 12.5 65.5 12.5 C78.5 12.5 89 22.5 89 36.5 C89 55 73 71 50 90 Z" fill="url(#w1)"/><circle cx="38.5" cy="42" r="4.6" fill="#23253A"/><circle cx="61.5" cy="42" r="4.6" fill="#23253A"/><path d="M36 54 Q50 66 64 54" fill="none" stroke="#23253A" stroke-width="5" stroke-linecap="round"/></svg>
+    kindly
+  </div>
+  <div class="nav-links">
+    <a href="#platform">Platform</a><a href="#core">Kindly Core</a><a href="#audit">The Audit</a>
+    <a class="cta" href="#audit">Book an audit</a>
+  </div>
+</div></nav>
+
+<div class="wrap hero">
+  <div>
+    <div class="kicker">Operational consultancy · Self-hosted AI · Adoption training</div>
+    <h1>Kindly do the needful.<br><em>We actually will.</em></h1>
+    <p class="lead">Kindly finds the waste in your operations, deploys AI that never leaves your building, and trains your people to love using it. Built for companies that can't — and shouldn't — ship their data to the cloud.</p>
+    <a class="btn btn-coral" href="#audit">Book an Operations Audit</a>
+    <a class="btn btn-ghost" href="#core">Meet Kin →</a>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 200 200" width="280" height="280"><defs><linearGradient id="w2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF6F61"/><stop offset="1" stop-color="#FFB25E"/></linearGradient></defs><line x1="100" y1="42" x2="100" y2="24" stroke="#23253A" stroke-width="6" stroke-linecap="round"/><circle cx="100" cy="18" r="7" fill="#FFB25E"/><rect x="18" y="88" width="14" height="34" rx="7" fill="#23253A"/><rect x="168" y="88" width="14" height="34" rx="7" fill="#23253A"/><rect x="34" y="46" width="132" height="118" rx="34" fill="#23253A"/><rect x="44" y="56" width="112" height="98" rx="26" fill="#FFF6EE"/><g transform="translate(58,60) scale(0.86)"><path d="M50 90 C 27 71 11 55 11 36.5 C11 22.5 21.5 12.5 34.5 12.5 C42.8 12.5 50 17.8 50 26 C50 17.8 57.2 12.5 65.5 12.5 C78.5 12.5 89 22.5 89 36.5 C89 55 73 71 50 90 Z" fill="url(#w2)"/><circle cx="38.5" cy="42" r="4.6" fill="#23253A"/><circle cx="61.5" cy="42" r="4.6" fill="#23253A"/><path d="M36 54 Q50 66 64 54" fill="none" stroke="#23253A" stroke-width="5" stroke-linecap="round"/></g><circle cx="60" cy="132" r="6" fill="#FF6F61" opacity="0.35"/><circle cx="140" cy="132" r="6" fill="#FF6F61" opacity="0.35"/></svg>
+  </div>
+</div>
+
+<div class="strip">Your data never leaves your building. <b>That's not a feature — that's the product.</b></div>
+
+<section id="platform"><div class="wrap">
+  <div class="sec-head">
+    <h2>One platform. Three pillars.</h2>
+    <p>Consulting finds it. AI fixes it. Training makes it stick.</p>
+  </div>
+  <div class="cards">
+    <div class="card c1"><h3>kindly ops</h3><div class="tag">Operational consultancy</div><p>A productized 4–6 week Operations Audit. We map your workflows, quantify the waste, and hand you a prioritized fix list — then configure the AI that fixes it.</p></div>
+    <div class="card c2"><h3>kindly core</h3><div class="tag">Self-hosted secure intelligence</div><p>A private AI stack inside your own walls. Open-weight models, retrieval over your policies, SOPs, and contracts. Zero external calls. The CISO says yes.</p></div>
+    <div class="card c3"><h3>kindly people</h3><div class="tag">EQ & adoption training</div><p>Emotional-intelligence and change programs built around the rollout. Because transformations fail on people, not technology.</p></div>
+  </div>
+</div></section>
+
+<section id="core" style="padding-top:0;"><div class="wrap">
+  <div class="core">
+    <div>
+      <h2>Meet Kin — the assistant your employees will actually enjoy asking.</h2>
+      <p>Deployed on your own GPU cluster, air-gapped if you need it. Kin knows your company — with role-based access, full audit logs, and a standard 6–8 week rollout. An appliance, not a science project.</p>
+      <div class="chips">
+        <span><b>✓</b> 100% self-hosted</span><span><b>✓</b> Air-gap option</span><span><b>✓</b> SSO & RBAC</span><span><b>✓</b> Full audit logs</span><span><b>✓</b> Zero external calls</span>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <svg viewBox="0 0 200 200" width="220" height="220"><defs><linearGradient id="w3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF6F61"/><stop offset="1" stop-color="#FFB25E"/></linearGradient></defs><line x1="100" y1="42" x2="100" y2="24" stroke="#FFF6EE" stroke-width="6" stroke-linecap="round"/><circle cx="100" cy="18" r="7" fill="#FFB25E"/><rect x="18" y="88" width="14" height="34" rx="7" fill="#FFF6EE"/><rect x="168" y="88" width="14" height="34" rx="7" fill="#FFF6EE"/><rect x="34" y="46" width="132" height="118" rx="34" fill="#FFF6EE"/><rect x="44" y="56" width="112" height="98" rx="26" fill="#23253A"/><g transform="translate(58,60) scale(0.86)"><path d="M50 90 C 27 71 11 55 11 36.5 C11 22.5 21.5 12.5 34.5 12.5 C42.8 12.5 50 17.8 50 26 C50 17.8 57.2 12.5 65.5 12.5 C78.5 12.5 89 22.5 89 36.5 C89 55 73 71 50 90 Z" fill="url(#w3)"/><circle cx="38.5" cy="42" r="4.6" fill="#23253A"/><circle cx="61.5" cy="42" r="4.6" fill="#23253A"/><path d="M36 54 Q50 66 64 54" fill="none" stroke="#23253A" stroke-width="5" stroke-linecap="round"/></g></svg>
+    </div>
+  </div>
+</div></section>
+
+<section id="audit"><div class="wrap">
+  <div class="offer">
+    <div>
+      <h2 style="font-size:34px;">Start with the Operations Audit.</h2>
+      <p style="color:#4A4C60;margin-top:12px;">Four to six weeks. Fixed fee. A prioritized map of exactly where your operations leak time and money — and what an internal AI could reclaim.</p>
+      <ol>
+        <li>We map your workflows and interview the people who actually run them.</li>
+        <li>You get a quantified waste report and a prioritized fix list.</li>
+        <li>The report doubles as the deployment plan for Kindly Core — if you want it.</li>
+      </ol>
+    </div>
+    <div>
+      <h3 style="font-size:20px;margin-bottom:16px;">Kindly get in touch.</h3>
+      <form action="mailto:hello@kindly.works" method="get" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Work email" required>
+        <input type="text" name="company" placeholder="Company">
+        <select name="interest"><option>Operations Audit</option><option>Kindly Core (self-hosted AI)</option><option>Kindly People (training)</option><option>All of it, kindly</option></select>
+        <button class="btn btn-coral" type="submit">Do the needful →</button>
+        <div class="fine">We reply within one business day. Warm regards, meant literally.</div>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap foot-in">
+  <span>kindly · secure intelligence, kindly delivered</span>
+  <span>a Lunatechs venture · hello@kindly.works</span>
+</div></footer>
+
+</body>
+</html>
