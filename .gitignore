@@ -1,0 +1,8 @@
+# lead data & generated artifacts — never commit (GDPR + business-sensitive)
+growth/leads.db*
+growth/inbox/
+growth/history.csv
+growth/next_actions.json
+growth/phase-scoreboard.*
+growth/funnel-dashboard.html
+growth/manual_metrics.json

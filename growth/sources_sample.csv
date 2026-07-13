@@ -1,0 +1,26 @@
+company,domain,sector,employees,country,contact_name,contact_role,signal,source
+Meridian Mutual Insurance,meridianmutual.example,insurance,3200,DE,Petra Kaufmann,COO,hiring Head of Process Excellence,job_board
+Nordbank Regional,nordbank.example,banking,5400,DE,Lars Wenzel,CISO,posted about cloud-AI ban internally,conference_talk
+CareCluster Kliniken,carecluster.example,healthcare,7800,DE,Dr. Amira Hassan,Transformation Lead,RFP for workflow automation,public_rfp
+LexFirma Partners,lexfirma.example,legal,900,AT,Sophie Brandner,Managing Partner,article on document review bottlenecks,press
+StadtWerke Sued,stadtwerkesued.example,energy,2100,DE,Jonas Pichler,Head of Operations,tender for internal knowledge system,public_tender
+Helvetia Precision AG,helvetiaprecision.example,manufacturing,1600,CH,Marc Duvoisin,CTO,IP-sensitive R&D expansion announced,press
+Assekuranz Direkt,assekuranzdirekt.example,insurance,1100,DE,Nina Roth,Head of Claims,claims backlog mentioned in earnings call,earnings_call
+MedLogistik GmbH,medlogistik.example,healthcare,650,DE,Tobias Krüger,COO,hiring 3 process analysts,job_board
+Kanton Bank Ost,kantonbankost.example,banking,2900,CH,Elena Widmer,Head of Compliance,new data residency policy published,press
+JurisConsult Group,jurisconsult.example,legal,450,DE,Felix Adler,Innovation Partner,speaking at LegalTech about on-prem AI,conference_talk
+EnergieNetz Nord,energienetznord.example,energy,3600,DE,Sandra Meyer,CDO,digital transformation budget approved,press
+PharmaWerk Labs,pharmawerklabs.example,manufacturing,2400,DE,Dr. Stefan Vogel,Head of Quality,GxP compliance automation interest,conference_talk
+Volksversicherung AG,volksversicherung.example,insurance,8600,DE,Claudia Berger,COO,cost program announced,earnings_call
+Spital Gruppe West,spitalwest.example,healthcare,5100,CH,Reto Ammann,CIO,EHR workflow complaints in trade press,press
+Bundesagentur Verkehr,bundesverkehr.example,public sector,9200,DE,Heike Lorenz,Digitalisierung Lead,e-government modernization mandate,public_tender
+SteuerPartner Kanzlei,steuerpartner.example,legal,300,DE,Michael Frey,Managing Partner,hiring knowledge manager,job_board
+AlpenChem AG,alpenchem.example,manufacturing,1900,AT,Julia Steiner,Head of Operations,ERP migration announced,press
+MediPay Abrechnung,medipay.example,healthcare,780,DE,Kerstin Wolf,CEO,billing error rate cited in interview,press
+Hansa Rück AG,hansarueck.example,insurance,4300,DE,Oliver Schmitt,Chief Underwriting Officer,underwriting modernization program,earnings_call
+Stadtwerke Mitte,stadtwerkemitte.example,energy,1400,DE,Paul Hoffmann,Head of IT,no-cloud policy confirmed in tender docs,public_tender
+PrivatBank Elbe,privatbankelbe.example,banking,1200,DE,Anna Lindt,COO,manual KYC process criticized by auditor,audit_report
+LogisTrans Europa,logistrans.example,logistics,3800,DE,Marko Jurić,Operations Director,dispatch inefficiency case study,press
+FeinMechanik Bayern,feinmechanik.example,manufacturing,850,DE,Thomas Egger,Geschäftsführer,defense supplier — strict data rules,press
+KlinikVerbund Rhein,klinikrhein.example,healthcare,6700,DE,Dr. Laura Simon,COO,nurse admin burden initiative,press
+VersichertPlus,versichertplus.example,insurance,560,DE,David Naumann,Head of Ops,hiring RPA developer,job_board
